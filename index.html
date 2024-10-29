@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Strong Password</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Raleway:wght@100;200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet" />
+</head>
+
+<body>
+
+  <div id="root">
+
+    <div class="password-infos-container">
+      <p>Votre mot de passe</p>
+      <div class="password-container">
+        <p id="password-display">drf65fqss$a0fù</p>
+        <svg id="copy-btn" tabindex="0" width="30" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 488.3 488.3"
+          style="enable-background:new 0 0 488.3 488.3;" xml:space="preserve">
+          <g>
+            <g>
+              <path d="M314.25,85.4h-227c-21.3,0-38.6,17.3-38.6,38.6v325.7c0,21.3,17.3,38.6,38.6,38.6h227c21.3,0,38.6-17.3,38.6-38.6V124
+          C352.75,102.7,335.45,85.4,314.25,85.4z M325.75,449.6c0,6.4-5.2,11.6-11.6,11.6h-227c-6.4,0-11.6-5.2-11.6-11.6V124
+          c0-6.4,5.2-11.6,11.6-11.6h227c6.4,0,11.6,5.2,11.6,11.6V449.6z" />
+              <path d="M401.05,0h-227c-21.3,0-38.6,17.3-38.6,38.6c0,7.5,6,13.5,13.5,13.5s13.5-6,13.5-13.5c0-6.4,5.2-11.6,11.6-11.6h227
+          c6.4,0,11.6,5.2,11.6,11.6v325.7c0,6.4-5.2,11.6-11.6,11.6c-7.5,0-13.5,6-13.5,13.5s6,13.5,13.5,13.5c21.3,0,38.6-17.3,38.6-38.6
+          V38.6C439.65,17.3,422.35,0,401.05,0z" />
+            </g>
+          </g>
+          <g>
+          </g>
+          <g>
+          </g>
+          <g>
+          </g>
+          <g>
+          </g>
+          <g>
+          </g>
+          <g>
+          </g>
+          <g>
+          </g>
+          <g>
+          </g>
+          <g>
+          </g>
+          <g>
+          </g>
+          <g>
+          </g>
+          <g>
+          </g>
+          <g>
+          </g>
+          <g>
+          </g>
+          <g>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <div class="password-range-container">
+      <label for="password-range">Taille du mot de passe: <span id="password-range-display">12</span></label>
+      <input type="range" id="password-range" min="6" max="32" value="12">
+    </div>
+
+    <div class="password-checkboxes-container">
+      <label for="password-checkbox-0">
+        <input type="checkbox" class="password-checkbox" data-char="lowerChars" id="password-checkbox-0" checked>
+        Contient des caractères minuscules</label>
+      <label for="password-checkbox-1">
+        <input type="checkbox" class="password-checkbox" data-char="upperChars" id="password-checkbox-1">
+        Contient des caractères majuscules</label>
+      <label for="password-checkbox-2">
+        <input type="checkbox" class="password-checkbox" data-char="numbers" id="password-checkbox-2">
+        Contient des nombres</label>
+      <label for="password-checkbox-3">
+        <input type="checkbox" class="password-checkbox" data-char="symbols" id="password-checkbox-3">
+        Contient des symboles spéciaux</label>
+    </div>
+    <button id="generate-password-button">Générer</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>

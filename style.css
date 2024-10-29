@@ -1,0 +1,168 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 1px solid red;
+}
+
+body {
+  min-height: 100vh;
+  font-family: Open sans, Helvetica, sans-serif;
+  background: #111;
+  padding: clamp(20px, 5vw, 50px) 10px 10px;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+
+   min-width: 320px;
+  max-width: 50%;
+  width: 50%;
+  width: clamp(320px,50%, 70%); 
+  /* width: 40%; */
+  gap: 12px;
+}
+
+#root div {
+  width: 100%;
+}
+
+.password-infos-container {
+  .password-container {
+    position: relative;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    width: 100%;
+    margin: 12px 0 20px 0;
+
+    #password-display {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      padding-bottom: 8px;
+    }
+
+    #copy-btn {
+      padding: 8px;
+      width: 30px;
+      height: 34px;
+      background: #fff;
+      border-radius: 2px;
+
+      cursor: pointer;
+    }
+
+    #copy-btn:active {
+      transform: scale(0.95);
+    }
+  }
+
+  .password-container::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+    width: calc(100% - 42px);
+    height: 1px;
+    background: #fff;
+  }
+}
+
+.password-range-container,
+.password-checkboxes-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.password-range-container {
+  gap: 6px;
+
+  input[type="range"] {
+    width: 100%;
+  }
+}
+
+.password-checkboxes-container {
+  gap: 12px;
+
+  label {
+    user-select: none;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 14px;
+
+    color: #fff;
+
+    cursor: pointer;
+
+    input[type="checkbox"] {
+      cursor: pointer;
+    }
+
+  }
+}
+
+#generate-password-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 30px;
+  width: 112px;
+
+  background: none;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 2px;
+
+  cursor: pointer;
+
+  transition: 0.1s;
+}
+
+#generate-password-button:hover {
+  background: #fff;
+  color: #000;
+}
+
+#generate-password-button:active {
+  transform: scale(0.95);
+}
+
+
+@media screen and (max-width:750px) {
+
+  label,
+  p,
+  input,
+  button {
+    font-size: 0.9rem;
+  }
+} 
+
+@media screen and (max-width:400px) {
+ #root{
+  transform: scale(0.8);
+ }
+} 
